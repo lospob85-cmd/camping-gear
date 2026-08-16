@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://losp85-cmd.github.io/camping-gear/sitemap.xml
