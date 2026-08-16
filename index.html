@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html><head><link as_="image" href="assets/banners/site-header.webp" rel="preload"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Rye&amp;display=swap" rel="stylesheet"/><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Los' Camping Gear | Camping &amp; Festival Gear Picks</title><meta content="Los' Camping Gear is a curated list of practical camping and festival gear, from lighting and camp kitchen essentials to cooling, sleep, personal care, and foot-care gear." name="description"/><style>
+<html><head><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Rye&amp;display=swap" rel="stylesheet"/><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Los' Camping Gear | Camping &amp; Festival Gear Picks</title><meta content="Los' Camping Gear is a curated list of practical camping and festival gear, from lighting and camp kitchen essentials to cooling, sleep, personal care, and foot-care gear." name="description"/><style>
 html{scroll-behavior:smooth;scroll-padding-top:70px}
 :root{--g:#2f4f39;--bg:#f5f3eb;--c:#fff;--text:#222;--muted:#666}
 *{box-sizing:border-box}
@@ -76,7 +76,9 @@ section{width:100%;margin:0 auto 34px}
   padding:14px 15px;
   border-radius:16px;
   box-shadow:0 6px 16px #0002;
-  opacity:1;transform:none
+  opacity:0;
+  transform:translateY(20px);
+  transition:.3s
 }
 .show{opacity:1;transform:none}
 .card h3{font-size:1rem;line-height:1.3;margin:0;overflow-wrap:anywhere}
@@ -389,172 +391,60 @@ body.dark .category-menu a{background:#33443a;color:#eef}
   font-size:.95rem;
 }
 
-/* Final visual system */
+/* Vintage camping CTA */
+.btn{
+  background:#b9683f !important;
+  color:#fff7e8 !important;
+  border:1px solid #d18a5f;
+  box-shadow:0 3px 0 #6e3927;
+  font-weight:800;
+  letter-spacing:.01em;
+  transition:transform .15s ease, background-color .15s ease, box-shadow .15s ease;
+}
+.btn:hover{
+  background:#c9794b !important;
+  box-shadow:0 2px 0 #6e3927;
+  transform:translateY(1px);
+}
+.btn:active{
+  transform:translateY(3px);
+  box-shadow:0 0 0 #6e3927;
+}
+
+/* Primary Los' Camping Gear banner */
 .site-header{
   width:min(100% - 22px,1200px) !important;
-  aspect-ratio:940 / 153 !important;
-  min-height:0 !important;
-  margin:0 auto 18px !important;
+  height:clamp(150px,20vw,245px) !important;
+  min-height:150px !important;
+  aspect-ratio:auto !important;
+  margin:0 auto 20px !important;
   padding:0 !important;
   border-radius:18px !important;
   overflow:hidden !important;
-  position:relative !important;
-  background-color:#171614 !important;
-  background-repeat:no-repeat !important;
-  background-position:center !important;
   background-size:cover !important;
-  box-shadow:0 8px 24px #0007 !important;
-}
-.site-header h1{
-  position:absolute !important;
-  width:1px !important;
-  height:1px !important;
-  padding:0 !important;
-  margin:-1px !important;
-  overflow:hidden !important;
-  clip:rect(0,0,0,0) !important;
-  white-space:nowrap !important;
-  border:0 !important;
-}
-.site-header::before,
-.site-header::after{
-  content:none !important;
-  display:none !important;
-  background:none !important;
+  background-position:center center !important;
+  background-repeat:no-repeat !important;
 }
 .site-header .header-menu-btn{
-  position:absolute !important;
-  top:12px !important;
-  right:12px !important;
-  z-index:30 !important;
-}
-.wrap{
-  padding-top:12px;
-}
-.affiliate-disclosure{
-  margin:0 auto 10px !important;
-  padding:8px 12px !important;
-}
-.card{
-  max-width:720px !important;
-  padding:12px 14px !important;
-  border-radius:14px !important;
-}
-.card h3{
-  font-size:1rem !important;
-  line-height:1.28 !important;
-  margin:0 !important;
-}
-.btn{
-  padding:10px 13px !important;
-  margin-top:9px !important;
-  border-radius:10px !important;
-}
-.affiliate-note{
-  margin-top:5px !important;
-  font-size:.68rem !important;
-}
-section{
-  margin-bottom:28px !important;
-}
-.category-intro{
-  width:min(100%,720px);
-  margin:-7px auto 11px;
-  padding:0 4px;
-  color:var(--muted);
-  font-size:.9rem;
-  line-height:1.4;
-  text-align:center;
-}
-.banner-personalcare{
-  position:relative !important;
-}
-.banner-personalcare::after{
-  content:"Personal Care";
-  position:absolute;
-  inset:0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:0 12px;
-  background:linear-gradient(90deg,#1a1813b8,#1a1813b0,#1a1813b8);
-  color:#f3ead8;
-  font-family:"Rye",Georgia,serif;
-  font-size:clamp(1.8rem,8.5vw,3.2rem);
-  line-height:1;
-  text-shadow:3px 3px 0 #593528,0 4px 8px #000b;
+  top:14px !important;
+  right:14px !important;
 }
 @media (max-width:480px){
   .site-header{
-    width:calc(100% - 18px) !important;
-    aspect-ratio:940 / 153 !important;
+    height:128px !important;
+    min-height:128px !important;
+    margin-bottom:18px !important;
+    background-size:auto 100% !important;
+    background-position:center center !important;
   }
-  .category-intro{
-    font-size:.84rem;
-    margin-top:-4px;
-  }
-  .card{
-    padding:11px 12px !important;
+  .site-header .header-menu-btn{
+    top:10px !important;
+    right:10px !important;
   }
 }
 
-.site-header{
-  background-image:none !important;
-  display:block !important;
-}
-.site-header > img{
-  display:block;
-  width:100%;
-  height:100%;
-  min-height:0;
-  object-fit:cover;
-  object-position:center;
-}
-.banner{
-  background-image:none !important;
-  padding:0 !important;
-  display:block !important;
-  aspect-ratio:8.5 / 1 !important;
-}
-.banner > img{
-  display:block;
-  width:100%;
-  height:100%;
-  min-height:0;
-  object-fit:cover;
-  object-position:center;
-}
-.banner-personalcare::after{
-  z-index:2;
-}
-@media (max-width:480px){
-  .banner{aspect-ratio:6.5 / 1 !important;}
-}
-.site-intro{
-  width:min(100%,760px);
-  margin:0 auto 16px;
-  padding:0 8px;
-  text-align:center;
-}
-.site-intro h2{
-  margin:0 0 6px;
-  font-family:"Rye",Georgia,serif;
-  font-size:clamp(1.35rem,5vw,2rem);
-  color:var(--text);
-}
-.site-intro p{
-  margin:0;
-  color:var(--muted);
-  font-size:.94rem;
-  line-height:1.5;
-}
-
-.card h3{
-  overflow-wrap:anywhere;
-  text-wrap:balance;
-}
-</style><meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots"/><meta content="#171614" name="theme-color"/><meta content="website" property="og:type"/><meta content="https://losp85-cmd.github.io/camping-gear/" property="og:url"/><meta content="Los' Camping Gear | Camping &amp; Festival Gear Picks" property="og:title"/><meta content="Los' Camping Gear is a curated list of practical camping and festival gear, from lighting and camp kitchen essentials to cooling, sleep, personal care, and foot-care gear." property="og:description"/><meta content="Los' Camping Gear" property="og:site_name"/><meta content="en_US" property="og:locale"/><meta content="summary_large_image" name="twitter:card"/><meta content="Los' Camping Gear | Camping &amp; Festival Gear Picks" name="twitter:title"/><meta content="Los' Camping Gear is a curated list of practical camping and festival gear, from lighting and camp kitchen essentials to cooling, sleep, personal care, and foot-care gear." name="twitter:description"/><link href="https://losp85-cmd.github.io/camping-gear/" rel="canonical"/><link href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%23173025%22/%3E%0A%3Cpath%20d%3D%22M14%2045L24%2023l8%2014%207-10%2011%2018H14z%22%20fill%3D%22%23e8c889%22/%3E%0A%3Ccircle%20cx%3D%2243%22%20cy%3D%2218%22%20r%3D%225%22%20fill%3D%22%23d88963%22/%3E%0A%3C/svg%3E" rel="icon" type="image/svg+xml"/><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://losp85-cmd.github.io/camping-gear/#website","url":"https://losp85-cmd.github.io/camping-gear/","name":"Los' Camping Gear","description":"Los' Camping Gear is a curated list of practical camping and festival gear, from lighting and camp kitchen essentials to cooling, sleep, personal care, and foot-care gear.","inLanguage":"en-US"},{"@type":"WebPage","@id":"https://losp85-cmd.github.io/camping-gear/#webpage","url":"https://losp85-cmd.github.io/camping-gear/","name":"Los' Camping Gear | Camping & Festival Gear Picks","description":"Los' Camping Gear is a curated list of practical camping and festival gear, from lighting and camp kitchen essentials to cooling, sleep, personal care, and foot-care gear.","isPartOf":{"@id":"https://losp85-cmd.github.io/camping-gear/#website"},"inLanguage":"en-US","dateModified":"2026-08-16"}]}</script><meta content="https://losp85-cmd.github.io/camping-gear/assets/banners/site-header.webp" property="og:image"/><meta content="Los' Camping Gear camping and festival gear guide" property="og:image:alt"/><meta content="https://losp85-cmd.github.io/camping-gear/assets/banners/site-header.webp" name="twitter:image"/></head><body class="dark">
-<header class="site-header"><img alt="Los' Camping Gear" decoding="async" fetchpriority="high" height="153" src="assets/banners/site-header.webp" width="940"/>
+</style><meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots"/><meta content="#171614" name="theme-color"/><meta content="website" property="og:type"/><meta content="https://losp85-cmd.github.io/camping-gear/" property="og:url"/><meta content="Los' Camping Gear | Camping &amp; Festival Gear Picks" property="og:title"/><meta content="Los' Camping Gear is a curated list of practical camping and festival gear, from lighting and camp kitchen essentials to cooling, sleep, personal care, and foot-care gear." property="og:description"/><meta content="Los' Camping Gear" property="og:site_name"/><meta content="en_US" property="og:locale"/><meta content="summary_large_image" name="twitter:card"/><meta content="Los' Camping Gear | Camping &amp; Festival Gear Picks" name="twitter:title"/><meta content="Los' Camping Gear is a curated list of practical camping and festival gear, from lighting and camp kitchen essentials to cooling, sleep, personal care, and foot-care gear." name="twitter:description"/><link href="https://losp85-cmd.github.io/camping-gear/" rel="canonical"/><link href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%23173025%22/%3E%0A%3Cpath%20d%3D%22M14%2045L24%2023l8%2014%207-10%2011%2018H14z%22%20fill%3D%22%23e8c889%22/%3E%0A%3Ccircle%20cx%3D%2243%22%20cy%3D%2218%22%20r%3D%225%22%20fill%3D%22%23d88963%22/%3E%0A%3C/svg%3E" rel="icon" type="image/svg+xml"/><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://losp85-cmd.github.io/camping-gear/#website","url":"https://losp85-cmd.github.io/camping-gear/","name":"Los' Camping Gear","description":"Los' Camping Gear is a curated list of practical camping and festival gear, from lighting and camp kitchen essentials to cooling, sleep, personal care, and foot-care gear."},{"@type":"WebPage","@id":"https://losp85-cmd.github.io/camping-gear/#webpage","url":"https://losp85-cmd.github.io/camping-gear/","name":"Los' Camping Gear | Camping & Festival Gear Picks","description":"Los' Camping Gear is a curated list of practical camping and festival gear, from lighting and camp kitchen essentials to cooling, sleep, personal care, and foot-care gear.","isPartOf":{"@id":"https://losp85-cmd.github.io/camping-gear/#website"},"inLanguage":"en-US"},{"@type":"ItemList","name":"Los' Camping Gear categories","itemListElement":[{"@type":"ListItem","position":1,"name":"Organization","url":"https://losp85-cmd.github.io/camping-gear/#organization"},{"@type":"ListItem","position":2,"name":"Lighting","url":"https://losp85-cmd.github.io/camping-gear/#lighting"},{"@type":"ListItem","position":3,"name":"Kitchen","url":"https://losp85-cmd.github.io/camping-gear/#kitchen"},{"@type":"ListItem","position":4,"name":"Food","url":"https://losp85-cmd.github.io/camping-gear/#food"},{"@type":"ListItem","position":5,"name":"Drinking","url":"https://losp85-cmd.github.io/camping-gear/#drinking"},{"@type":"ListItem","position":6,"name":"Beat the Heat","url":"https://losp85-cmd.github.io/camping-gear/#beattheheat"},{"@type":"ListItem","position":7,"name":"Stay Warm","url":"https://losp85-cmd.github.io/camping-gear/#staywarm"},{"@type":"ListItem","position":8,"name":"Sleep","url":"https://losp85-cmd.github.io/camping-gear/#sleep"},{"@type":"ListItem","position":9,"name":"Personal Care","url":"https://losp85-cmd.github.io/camping-gear/#personalcare"},{"@type":"ListItem","position":10,"name":"Foot Care","url":"https://losp85-cmd.github.io/camping-gear/#footcare"},{"@type":"ListItem","position":11,"name":"Pain Relief","url":"https://losp85-cmd.github.io/camping-gear/#painrelief"},{"@type":"ListItem","position":12,"name":"Meds","url":"https://losp85-cmd.github.io/camping-gear/#meds"},{"@type":"ListItem","position":13,"name":"Misc","url":"https://losp85-cmd.github.io/camping-gear/#misc"}]}]}</script></head><body class="dark">
+<header class="site-header">
 <button aria-controls="categoryMenu" aria-expanded="false" aria-label="Open categories" class="header-menu-btn" id="menuBtn" title="Open category menu" type="button">☰</button>
 <h1>Los' Camping Gear</h1></header><nav class="topbar">
 <div aria-hidden="true" class="category-menu" id="categoryMenu">
@@ -572,21 +462,21 @@ section{
 <a href="#meds">Meds</a>
 <a href="#misc">Misc</a>
 </div>
-</nav><div class="wrap"><label class="sr-only" for="q">Search camping and festival gear</label><p class="affiliate-disclosure">As an Amazon Associate I earn from qualifying purchases.</p><div class="site-intro"><h2>Camping &amp; Festival Gear I’d Actually Pack</h2><p>A practical shortlist of camping and festival essentials, organized by the way you actually use them: set up camp, cook and hydrate, stay comfortable, sleep, clean up, and deal with the little problems that show up outdoors.</p></div><input aria-label="Search camping and festival gear" autocomplete="off" enterkeyhint="search" id="q" name="q" placeholder="Search camping &amp; festival gear..." role="searchbox" type="search"/><p class="no-results" hidden="" id="noResults">No gear matched your search.</p><section aria-labelledby="organization-heading" id="organization"><h2 class="sr-only" id="organization-heading">Organization</h2><div class="banner banner-organization"><img alt="Organization camping gear" decoding="async" height="78" src="assets/banners/organization.webp" width="994"/></div><p class="category-intro">Storage, wallets, and camp organizers that keep small gear from becoming campsite chaos.</p><div class="grid"><div class="card"><h3>Hanging Suitcase Organizer</h3><a aria-label="Hanging Suitcase Organizer: open on Amazon" class="btn" href="https://amzn.to/4fwIRv0" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>CHENSPRX Minimalist RFID Blocking Small Wallet</h3><a aria-label="CHENSPRX Minimalist RFID Blocking Small Wallet: open on Amazon" class="btn" href="https://amzn.to/3TyDrHa" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>Relavel Travel Toiletry Bag for Men, Large Hanging Toiletries Ba</h3><a aria-label="Relavel Travel Toiletry Bag for Men, Large Hanging Toiletries Ba: open on Amazon" class="btn" href="https://amzn.to/4xbhOuY" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>HODRANT Large Tactical Camping Kitchen Organizer for BBQ Cooking</h3><a aria-label="HODRANT Large Tactical Camping Kitchen Organizer for BBQ Cooking: open on Amazon" class="btn" href="https://amzn.to/3RqYQl4" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div></div></section>
-<section aria-labelledby="lighting-heading" id="lighting"><h2 class="sr-only" id="lighting-heading">Lighting</h2><div class="banner banner-lighting"><img alt="Lighting camping gear" decoding="async" height="78" src="assets/banners/lighting.webp" width="994"/></div><p class="category-intro">Lanterns and compact lights for cooking, setup, walking, and finding things after dark.</p><div class="grid"><div class="card"><h3>USB Mini LED Lantern, 2 Pack Waterproof EDC Keychain LED Flashli</h3><a aria-label="USB Mini LED Lantern, 2 Pack Waterproof EDC Keychain LED Flashli: open on Amazon" class="btn" href="https://amzn.to/4binXx5" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>ThruNite Ti Keychain Flashlight, USB-C Rechargeable EDC Pocket L</h3><a aria-label="ThruNite Ti Keychain Flashlight, USB-C Rechargeable EDC Pocket L: open on Amazon" class="btn" href="https://amzn.to/3Rkiori" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div></div></section>
-<section aria-labelledby="kitchen-heading" id="kitchen"><h2 class="sr-only" id="kitchen-heading">Kitchen</h2><div class="banner banner-kitchen"><img alt="Camp kitchen gear" decoding="async" height="78" loading="lazy" src="assets/banners/kitchen.webp" width="994"/></div><p class="category-intro">Practical camp cooking and cleanup gear for making meals without bringing your whole kitchen.</p><div class="grid"><div class="card"><h3>DUMOS Ice Maker Countertop, Ice Machine</h3><a aria-label="DUMOS Ice Maker Countertop, Ice Machine: open on Amazon" class="btn" href="https://amzn.to/4bn91hj" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>Pop-Up Trash Bin, Collapsible Trash Can, Black |</h3><a aria-label="Pop-Up Trash Bin, Collapsible Trash Can, Black |: open on Amazon" class="btn" href="https://amzn.to/4wzyIUk" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>20PCS Wheat Straw Dinnerware Sets, DQELFA Reusable Kids Toddler </h3><a aria-label="20PCS Wheat Straw Dinnerware Sets, DQELFA Reusable Kids Toddler: open on Amazon" class="btn" href="https://amzn.to/4wzxR6b" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>5 Gallon Water Jug</h3><a aria-label="5 Gallon Water Jug: open on Amazon" class="btn" href="https://amzn.to/3TKM69u" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>Clorox Free &amp; Clear Cleaning Wipes, Light Lemon Scent, 75 Count,</h3><a aria-label="Clorox Free &amp; Clear Cleaning Wipes, Light Lemon Scent, 75 Count,: open on Amazon" class="btn" href="https://amzn.to/3S5mnYT" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div></div></section>
-<section aria-labelledby="food-heading" id="food"><h2 class="sr-only" id="food-heading">Food</h2><div class="banner banner-food"><img alt="Camping food and snacks" decoding="async" height="78" loading="lazy" src="assets/banners/food.webp" width="994"/></div><p class="category-intro">Easy camp-friendly food and snack options for keeping energy up between activities.</p><div class="grid"><div class="card"><h3>Coffee Snax Cold Brew Coffee Concentrate, Caramel Coffee Concent</h3><a aria-label="Coffee Snax Cold Brew Coffee Concentrate, Caramel Coffee Concent: open on Amazon" class="btn" href="https://amzn.to/4vSpQI5" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div></div></section>
-<section aria-labelledby="drinking-heading" id="drinking"><h2 class="sr-only" id="drinking-heading">Drinking</h2><div class="banner banner-drinking"><img alt="Camping hydration and drinkware" decoding="async" height="78" loading="lazy" src="assets/banners/drinking.webp" width="994"/></div><p class="category-intro">Water storage, insulated drinkware, and hydration gear for long days outside.</p><div class="grid"><div class="card"><h3>12oz Insulated Travel Coffee Mug</h3><a aria-label="12oz Insulated Travel Coffee Mug: open on Amazon" class="btn" href="https://amzn.to/3TtK5OY" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>JOOPETALK Universal Can Cooler</h3><a aria-label="JOOPETALK Universal Can Cooler: open on Amazon" class="btn" href="https://amzn.to/4bphtwl" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>BJPKPK 64oz Stainless Steel Water Bottle, Half Gallon Insulated </h3><a aria-label="BJPKPK 64oz Stainless Steel Water Bottle, Half Gallon Insulated: open on Amazon" class="btn" href="https://amzn.to/4fuTRJh" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div></div></section>
-<section aria-labelledby="beattheheat-heading" id="beattheheat"><h2 class="sr-only" id="beattheheat-heading">Beat the Heat</h2><div class="banner banner-beattheheat"><img alt="Cooling gear for camping and festivals" decoding="async" height="78" loading="lazy" src="assets/banners/beattheheat.webp" width="994"/></div><p class="category-intro">Cooling gear for hot campsites, festival fields, and long stretches in the sun.</p><div class="grid"><div class="card"><h3>BASSDASH Men’s UPF 50+ Fishing Hiking Camo Hoodie Shirt</h3><a aria-label="BASSDASH Men’s UPF 50+ Fishing Hiking Camo Hoodie Shirt: open on Amazon" class="btn" href="https://amzn.to/4g5esnu" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>BLUE LIZARD Sport Mineral Sunscreen Spray SPF 50+, Dermatologist</h3><a aria-label="BLUE LIZARD Sport Mineral Sunscreen Spray SPF 50+, Dermatologist: open on Amazon" class="btn" href="https://amzn.to/4xdGO4U" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>Preboun 8 Pcs Neck Cooling Tubes Reusable Ice Neck Cooler Rings </h3><a aria-label="Preboun 8 Pcs Neck Cooling Tubes Reusable Ice Neck Cooler Rings: open on Amazon" class="btn" href="https://amzn.to/4pM8viG" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>Warmco D4 Pro Portable Camping Fan 20000mAh, 18W Charge &amp; 22.5W </h3><a aria-label="Warmco D4 Pro Portable Camping Fan 20000mAh, 18W Charge &amp; 22.5W: open on Amazon" class="btn" href="https://amzn.to/3RAsLqZ" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div></div></section>
-<section aria-labelledby="staywarm-heading" id="staywarm"><h2 class="sr-only" id="staywarm-heading">Stay Warm</h2><div class="banner banner-staywarm"><img alt="Warmth and cold-weather camping gear" decoding="async" height="78" loading="lazy" src="assets/banners/staywarm.webp" width="994"/></div><p class="category-intro">Hand warmers and cold-weather comfort gear for chilly nights and early mornings.</p><div class="grid"><div class="card"><h3>AI Hand Warmers Rechargeable 2 Pack, AI Smart Chips Electric Han</h3><a aria-label="AI Hand Warmers Rechargeable 2 Pack, AI Smart Chips Electric Han: open on Amazon" class="btn" href="https://amzn.to/4h12U5Q" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>BRAMBLE 1 Pack Hand Warmers Reusable</h3><a aria-label="BRAMBLE 1 Pack Hand Warmers Reusable: open on Amazon" class="btn" href="https://amzn.to/4xgRzDG" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div></div></section>
-<section aria-labelledby="sleep-heading" id="sleep"><h2 class="sr-only" id="sleep-heading">Sleep</h2><div class="banner banner-sleep"><img alt="Camping sleep gear" decoding="async" height="78" loading="lazy" src="assets/banners/sleep.webp" width="994"/></div><p class="category-intro">Camping sleep gear aimed at making a tent, campsite, or festival setup more comfortable.</p><div class="grid"><div class="card"><h3>Lost Horizon Option3 Self-Inflating Foam Camping Mattress, Twin,</h3><a aria-label="Lost Horizon Option3 Self-Inflating Foam Camping Mattress, Twin,: open on Amazon" class="btn" href="https://amzn.to/3S7jyXg" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>Amazon Basic Care Nighttime Sleep Aid Tablets for Adults, Doxyla</h3><a aria-label="Amazon Basic Care Nighttime Sleep Aid Tablets for Adults, Doxyla: open on Amazon" class="btn" href="https://amzn.to/3Txb7F5" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>LC-dolida Sleep Headphones, Sleep Mask</h3><a aria-label="LC-dolida Sleep Headphones, Sleep Mask: open on Amazon" class="btn" href="https://amzn.to/3S0Tkpo" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div></div></section>
-<section aria-labelledby="personalcare-heading" id="personalcare"><h2 class="sr-only" id="personalcare-heading">Personal Care</h2><div class="banner banner-personalcare"><img alt="Personal care camping essentials" decoding="async" height="78" loading="lazy" src="assets/banners/personalcare.webp" width="994"/></div><p class="category-intro">Toiletries, hygiene, skin care, and everyday cleanup essentials for staying fresh outdoors.</p><div class="grid"><div class="card"><h3>Disposable Compressed Towels, Compressed Towel Tablets, 100 Coun</h3><a aria-label="Disposable Compressed Towels, Compressed Towel Tablets, 100 Coun: open on Amazon" class="btn" href="https://amzn.to/4bl7b0e" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>Toilet Seat Cover Paper Flushable</h3><a aria-label="Toilet Seat Cover Paper Flushable: open on Amazon" class="btn" href="https://amzn.to/4vXEGwW" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>1000cc Pee Bags for Travel for Women Men Kids, 12/24 Pcs Disposa</h3><a aria-label="1000cc Pee Bags for Travel for Women Men Kids, 12/24 Pcs Disposa: open on Amazon" class="btn" href="https://amzn.to/4x4rsQa" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>Garden Pump Sprayer,68oz/34oz Hand-held Pressure Sprayer Bottle </h3><a aria-label="Garden Pump Sprayer,68oz/34oz Hand-held Pressure Sprayer Bottle: open on Amazon" class="btn" href="https://amzn.to/4fErhDX" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div>
-<div class="card"><h3>Lansinoh Lanolin Lip Balm, 2 Pack, 0.25 oz Each, Ultra-Moisturiz</h3><a aria-label="Lansinoh Lanolin Lip Balm, 2 Pack, 0.25 oz Each, Ultra-Moisturiz: open on Amazon" class="btn" href="https://amzn.to/3Rr4fbP" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div>
-<div class="card"><h3>Teenitor 400 Counts Oil Blotting Papers for Face, Bamboo Charcoa</h3><a aria-label="Teenitor 400 Counts Oil Blotting Papers for Face, Bamboo Charcoa: open on Amazon" class="btn" href="https://amzn.to/4biormT" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>O2 Nose Filters</h3><a aria-label="O2 Nose Filters: open on Amazon" class="btn" href="https://amzn.to/44XFuHq" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>Body Glide Original Anti Chafe Balm | No Chafing Stick | Prevent</h3><a aria-label="Body Glide Original Anti Chafe Balm | No Chafing Stick | Prevent: open on Amazon" class="btn" href="https://amzn.to/4fF8AS5" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>Dr. Dan's Cortibalm 1-Pack Lip Balm</h3><a aria-label="Dr. Dan's Cortibalm 1-Pack Lip Balm: open on Amazon" class="btn" href="https://amzn.to/44YxAgU" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div></div></section>
-<section aria-labelledby="footcare-heading" id="footcare"><h2 class="sr-only" id="footcare-heading">Foot Care</h2><div class="banner banner-footcare"><img alt="Foot care camping gear" decoding="async" height="78" loading="lazy" src="assets/banners/footcare.webp" width="994"/></div><p class="category-intro">Insoles, foot warmers, and recovery-focused gear for people spending all day on their feet.</p><div class="grid"><div class="card"><h3>Dr. Scholl's® Tired, Achy Feet Soothing &amp; Reviving Foot Mask, 3 </h3><a aria-label="Dr. Scholl's® Tired, Achy Feet Soothing &amp; Reviving Foot Mask, 3: open on Amazon" class="btn" href="https://amzn.to/3REmsCO" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>Insole Foot Warmers</h3><a aria-label="Insole Foot Warmers: open on Amazon" class="btn" href="https://amzn.to/4wy3Inu" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>4D Cloud Insoles for Men and Women Insoles Men Super Soft Anti-F</h3><a aria-label="4D Cloud Insoles for Men and Women Insoles Men Super Soft Anti-F: open on Amazon" class="btn" href="https://amzn.to/3TNHHTb" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div></div></section>
-<section aria-labelledby="painrelief-heading" id="painrelief"><h2 class="sr-only" id="painrelief-heading">Pain Relief</h2><div class="banner banner-painrelief"><img alt="Pain relief and recovery camping gear" decoding="async" height="78" loading="lazy" src="assets/banners/painrelief.webp" width="994"/></div><p class="category-intro">Simple comfort and recovery items for sore muscles, aches, and long days outdoors.</p><div class="grid"><div class="card"><h3>Ancient Minerals Magnesium Bath Flakes – Pure Zechstein Magnesiu</h3><a aria-label="Ancient Minerals Magnesium Bath Flakes – Pure Zechstein Magnesiu: open on Amazon" class="btn" href="https://amzn.to/4fHSky9" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div></div></section>
-<section aria-labelledby="meds-heading" id="meds"><h2 class="sr-only" id="meds-heading">Meds</h2><div class="banner banner-meds"><img alt="Camping and travel medicine essentials" decoding="async" height="78" loading="lazy" src="assets/banners/meds.webp" width="994"/></div><p class="category-intro">Basic over-the-counter travel and camping medicine essentials to keep in your kit.</p><div class="grid"><div class="card"><h3>HealthA2Z® Gas Relief Simethicone 180mg | Relieves from Stomach </h3><a aria-label="HealthA2Z® Gas Relief Simethicone 180mg | Relieves from Stomach: open on Amazon" class="btn" href="https://amzn.to/44Y50MA" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>Vitamatic Peppermint Oil Gel</h3><a aria-label="Vitamatic Peppermint Oil Gel: open on Amazon" class="btn" href="https://amzn.to/4vVzwBB" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>Dual Action Acetaminophen 250mg and Ibuprofen 125mg Caplets, Up </h3><a aria-label="Dual Action Acetaminophen 250mg and Ibuprofen 125mg Caplets, Up: open on Amazon" class="btn" href="https://amzn.to/4wwX0hA" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div></div></section>
-<section aria-labelledby="misc-heading" id="misc"><h2 class="sr-only" id="misc-heading">Misc</h2><div class="banner banner-misc"><img alt="Miscellaneous camping gear" decoding="async" height="78" loading="lazy" src="assets/banners/misc.webp" width="994"/></div><p class="category-intro">Useful odds and ends that solve the random problems that inevitably appear at camp.</p><div class="grid"><div class="card"><h3>Replacement Plastic Festival Wristband Locks (25PCS)</h3><a aria-label="Replacement Plastic Festival Wristband Locks (25PCS): open on Amazon" class="btn" href="https://amzn.to/3TyDUsU" rel="nofollow noopener sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div></div></section><footer style="padding:40px;text-align:center">As an Amazon Associate I earn from qualifying purchases.</footer></div>
+</nav><div class="wrap"><label class="sr-only" for="q">Search camping and festival gear</label><p class="affiliate-disclosure">As an Amazon Associate I earn from qualifying purchases.</p><input aria-label="Search camping and festival gear" autocomplete="off" enterkeyhint="search" id="q" name="q" placeholder="Search camping &amp; festival gear..." type="search"/><p class="no-results" hidden="" id="noResults">No gear matched your search.</p><section aria-labelledby="organization-heading" id="organization"><h2 class="sr-only" id="organization-heading">Organization</h2><div class="banner banner-organization"></div><div class="grid"><div class="card"><h3>Hanging Suitcase Organizer</h3><a aria-label="Hanging Suitcase Organizer: open on Amazon" class="btn" href="https://amzn.to/4fwIRv0" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>CHENSPRX Minimalist RFID Blocking Small Wallet</h3><a aria-label="CHENSPRX Minimalist RFID Blocking Small Wallet: open on Amazon" class="btn" href="https://amzn.to/3TyDrHa" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>Relavel Travel Toiletry Bag for Men, Large Hanging Toiletries Ba</h3><a aria-label="Relavel Travel Toiletry Bag for Men, Large Hanging Toiletries Ba: open on Amazon" class="btn" href="https://amzn.to/4xbhOuY" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>HODRANT Large Tactical Camping Kitchen Organizer for BBQ Cooking</h3><a aria-label="HODRANT Large Tactical Camping Kitchen Organizer for BBQ Cooking: open on Amazon" class="btn" href="https://amzn.to/3RqYQl4" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div></div></section>
+<section aria-labelledby="lighting-heading" id="lighting"><h2 class="sr-only" id="lighting-heading">Lighting</h2><div class="banner banner-lighting"></div><div class="grid"><div class="card"><h3>USB Mini LED Lantern, 2 Pack Waterproof EDC Keychain LED Flashli</h3><a aria-label="USB Mini LED Lantern, 2 Pack Waterproof EDC Keychain LED Flashli: open on Amazon" class="btn" href="https://amzn.to/4binXx5" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>ThruNite Ti Keychain Flashlight, USB-C Rechargeable EDC Pocket L</h3><a aria-label="ThruNite Ti Keychain Flashlight, USB-C Rechargeable EDC Pocket L: open on Amazon" class="btn" href="https://amzn.to/3Rkiori" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div></div></section>
+<section aria-labelledby="kitchen-heading" id="kitchen"><h2 class="sr-only" id="kitchen-heading">Kitchen</h2><div class="banner banner-kitchen"></div><div class="grid"><div class="card"><h3>DUMOS Ice Maker Countertop, Ice Machine</h3><a aria-label="DUMOS Ice Maker Countertop, Ice Machine: open on Amazon" class="btn" href="https://amzn.to/4bn91hj" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>Pop-Up Trash Bin, Collapsible Trash Can, Black |</h3><a aria-label="Pop-Up Trash Bin, Collapsible Trash Can, Black |: open on Amazon" class="btn" href="https://amzn.to/4wzyIUk" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>20PCS Wheat Straw Dinnerware Sets, DQELFA Reusable Kids Toddler </h3><a aria-label="20PCS Wheat Straw Dinnerware Sets, DQELFA Reusable Kids Toddler: open on Amazon" class="btn" href="https://amzn.to/4wzxR6b" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>5 Gallon Water Jug</h3><a aria-label="5 Gallon Water Jug: open on Amazon" class="btn" href="https://amzn.to/3TKM69u" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>Clorox Free &amp; Clear Cleaning Wipes, Light Lemon Scent, 75 Count,</h3><a aria-label="Clorox Free &amp; Clear Cleaning Wipes, Light Lemon Scent, 75 Count,: open on Amazon" class="btn" href="https://amzn.to/3S5mnYT" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div></div></section>
+<section aria-labelledby="food-heading" id="food"><h2 class="sr-only" id="food-heading">Food</h2><div class="banner banner-food"></div><div class="grid"><div class="card"><h3>Coffee Snax Cold Brew Coffee Concentrate, Caramel Coffee Concent</h3><a aria-label="Coffee Snax Cold Brew Coffee Concentrate, Caramel Coffee Concent: open on Amazon" class="btn" href="https://amzn.to/4vSpQI5" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div></div></section>
+<section aria-labelledby="drinking-heading" id="drinking"><h2 class="sr-only" id="drinking-heading">Drinking</h2><div class="banner banner-drinking"></div><div class="grid"><div class="card"><h3>12oz Insulated Travel Coffee Mug</h3><a aria-label="12oz Insulated Travel Coffee Mug: open on Amazon" class="btn" href="https://amzn.to/3TtK5OY" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>JOOPETALK Universal Can Cooler</h3><a aria-label="JOOPETALK Universal Can Cooler: open on Amazon" class="btn" href="https://amzn.to/4bphtwl" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>BJPKPK 64oz Stainless Steel Water Bottle, Half Gallon Insulated </h3><a aria-label="BJPKPK 64oz Stainless Steel Water Bottle, Half Gallon Insulated: open on Amazon" class="btn" href="https://amzn.to/4fuTRJh" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div></div></section>
+<section aria-labelledby="beattheheat-heading" id="beattheheat"><h2 class="sr-only" id="beattheheat-heading">Beat the Heat</h2><div class="banner banner-beattheheat"></div><div class="grid"><div class="card"><h3>BASSDASH Men’s UPF 50+ Fishing Hiking Camo Hoodie Shirt</h3><a aria-label="BASSDASH Men’s UPF 50+ Fishing Hiking Camo Hoodie Shirt: open on Amazon" class="btn" href="https://amzn.to/4g5esnu" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>BLUE LIZARD Sport Mineral Sunscreen Spray SPF 50+, Dermatologist</h3><a aria-label="BLUE LIZARD Sport Mineral Sunscreen Spray SPF 50+, Dermatologist: open on Amazon" class="btn" href="https://amzn.to/4xdGO4U" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>Preboun 8 Pcs Neck Cooling Tubes Reusable Ice Neck Cooler Rings </h3><a aria-label="Preboun 8 Pcs Neck Cooling Tubes Reusable Ice Neck Cooler Rings: open on Amazon" class="btn" href="https://amzn.to/4pM8viG" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>Warmco D4 Pro Portable Camping Fan 20000mAh, 18W Charge &amp; 22.5W </h3><a aria-label="Warmco D4 Pro Portable Camping Fan 20000mAh, 18W Charge &amp; 22.5W: open on Amazon" class="btn" href="https://amzn.to/3RAsLqZ" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div></div></section>
+<section aria-labelledby="staywarm-heading" id="staywarm"><h2 class="sr-only" id="staywarm-heading">Stay Warm</h2><div class="banner banner-staywarm"></div><div class="grid"><div class="card"><h3>AI Hand Warmers Rechargeable 2 Pack, AI Smart Chips Electric Han</h3><a aria-label="AI Hand Warmers Rechargeable 2 Pack, AI Smart Chips Electric Han: open on Amazon" class="btn" href="https://amzn.to/4h12U5Q" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>BRAMBLE 1 Pack Hand Warmers Reusable</h3><a aria-label="BRAMBLE 1 Pack Hand Warmers Reusable: open on Amazon" class="btn" href="https://amzn.to/4xgRzDG" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div></div></section>
+<section aria-labelledby="sleep-heading" id="sleep"><h2 class="sr-only" id="sleep-heading">Sleep</h2><div class="banner banner-sleep"></div><div class="grid"><div class="card"><h3>Lost Horizon Option3 Self-Inflating Foam Camping Mattress, Twin,</h3><a aria-label="Lost Horizon Option3 Self-Inflating Foam Camping Mattress, Twin,: open on Amazon" class="btn" href="https://amzn.to/3S7jyXg" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>Amazon Basic Care Nighttime Sleep Aid Tablets for Adults, Doxyla</h3><a aria-label="Amazon Basic Care Nighttime Sleep Aid Tablets for Adults, Doxyla: open on Amazon" class="btn" href="https://amzn.to/3Txb7F5" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>LC-dolida Sleep Headphones, Sleep Mask</h3><a aria-label="LC-dolida Sleep Headphones, Sleep Mask: open on Amazon" class="btn" href="https://amzn.to/3S0Tkpo" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div></div></section>
+<section aria-labelledby="personalcare-heading" id="personalcare"><h2 class="sr-only" id="personalcare-heading">Personal Care</h2><div class="banner banner-personalcare"></div><div class="grid"><div class="card"><h3>Disposable Compressed Towels, Compressed Towel Tablets, 100 Coun</h3><a aria-label="Disposable Compressed Towels, Compressed Towel Tablets, 100 Coun: open on Amazon" class="btn" href="https://amzn.to/4bl7b0e" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>Toilet Seat Cover Paper Flushable</h3><a aria-label="Toilet Seat Cover Paper Flushable: open on Amazon" class="btn" href="https://amzn.to/4vXEGwW" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>1000cc Pee Bags for Travel for Women Men Kids, 12/24 Pcs Disposa</h3><a aria-label="1000cc Pee Bags for Travel for Women Men Kids, 12/24 Pcs Disposa: open on Amazon" class="btn" href="https://amzn.to/4x4rsQa" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>Garden Pump Sprayer,68oz/34oz Hand-held Pressure Sprayer Bottle </h3><a aria-label="Garden Pump Sprayer,68oz/34oz Hand-held Pressure Sprayer Bottle: open on Amazon" class="btn" href="https://amzn.to/4fErhDX" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div>
+<div class="card"><h3>Lansinoh Lanolin Lip Balm, 2 Pack, 0.25 oz Each, Ultra-Moisturiz</h3><a aria-label="Lansinoh Lanolin Lip Balm, 2 Pack, 0.25 oz Each, Ultra-Moisturiz: open on Amazon" class="btn" href="https://amzn.to/3Rr4fbP" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div>
+<div class="card"><h3>Teenitor 400 Counts Oil Blotting Papers for Face, Bamboo Charcoa</h3><a aria-label="Teenitor 400 Counts Oil Blotting Papers for Face, Bamboo Charcoa: open on Amazon" class="btn" href="https://amzn.to/4biormT" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>O2 Nose Filters</h3><a aria-label="O2 Nose Filters: open on Amazon" class="btn" href="https://amzn.to/44XFuHq" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>Body Glide Original Anti Chafe Balm | No Chafing Stick | Prevent</h3><a aria-label="Body Glide Original Anti Chafe Balm | No Chafing Stick | Prevent: open on Amazon" class="btn" href="https://amzn.to/4fF8AS5" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>Dr. Dan's Cortibalm 1-Pack Lip Balm</h3><a aria-label="Dr. Dan's Cortibalm 1-Pack Lip Balm: open on Amazon" class="btn" href="https://amzn.to/44YxAgU" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div></div></section>
+<section aria-labelledby="footcare-heading" id="footcare"><h2 class="sr-only" id="footcare-heading">Foot Care</h2><div class="banner banner-footcare"></div><div class="grid"><div class="card"><h3>Dr. Scholl's® Tired, Achy Feet Soothing &amp; Reviving Foot Mask, 3 </h3><a aria-label="Dr. Scholl's® Tired, Achy Feet Soothing &amp; Reviving Foot Mask, 3: open on Amazon" class="btn" href="https://amzn.to/3REmsCO" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>Insole Foot Warmers</h3><a aria-label="Insole Foot Warmers: open on Amazon" class="btn" href="https://amzn.to/4wy3Inu" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>4D Cloud Insoles for Men and Women Insoles Men Super Soft Anti-F</h3><a aria-label="4D Cloud Insoles for Men and Women Insoles Men Super Soft Anti-F: open on Amazon" class="btn" href="https://amzn.to/3TNHHTb" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div></div></section>
+<section aria-labelledby="painrelief-heading" id="painrelief"><h2 class="sr-only" id="painrelief-heading">Pain Relief</h2><div class="banner banner-painrelief"></div><div class="grid"><div class="card"><h3>Ancient Minerals Magnesium Bath Flakes – Pure Zechstein Magnesiu</h3><a aria-label="Ancient Minerals Magnesium Bath Flakes – Pure Zechstein Magnesiu: open on Amazon" class="btn" href="https://amzn.to/4fHSky9" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div></div></section>
+<section aria-labelledby="meds-heading" id="meds"><h2 class="sr-only" id="meds-heading">Meds</h2><div class="banner banner-meds"></div><div class="grid"><div class="card"><h3>HealthA2Z® Gas Relief Simethicone 180mg | Relieves from Stomach </h3><a aria-label="HealthA2Z® Gas Relief Simethicone 180mg | Relieves from Stomach: open on Amazon" class="btn" href="https://amzn.to/44Y50MA" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>Vitamatic Peppermint Oil Gel</h3><a aria-label="Vitamatic Peppermint Oil Gel: open on Amazon" class="btn" href="https://amzn.to/4vVzwBB" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div><div class="card"><h3>Dual Action Acetaminophen 250mg and Ibuprofen 125mg Caplets, Up </h3><a aria-label="Dual Action Acetaminophen 250mg and Ibuprofen 125mg Caplets, Up: open on Amazon" class="btn" href="https://amzn.to/4wwX0hA" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div></div></section>
+<section aria-labelledby="misc-heading" id="misc"><h2 class="sr-only" id="misc-heading">Misc</h2><div class="banner banner-misc"></div><div class="grid"><div class="card"><h3>Replacement Plastic Festival Wristband Locks (25PCS)</h3><a aria-label="Replacement Plastic Festival Wristband Locks (25PCS): open on Amazon" class="btn" href="https://amzn.to/3TyDUsU" rel="nofollow sponsored" target="_blank">Gimme That Gear</a><span class="affiliate-note">Affiliate link</span></div></div></section><footer style="padding:40px;text-align:center">As an Amazon Associate I earn from qualifying purchases.</footer></div>
 <script>
 let searchTimer;
 q.oninput=()=>{
@@ -603,6 +493,8 @@ q.oninput=()=>{
     if(noResults) noResults.hidden=!!matches;
   },80);
 };
+let io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}));document.querySelectorAll('.card').forEach(c=>io.observe(c));
+
 const secs=[...document.querySelectorAll('section')];
 const links=[...document.querySelectorAll('.category-menu a')];
 const menuBtn=document.getElementById('menuBtn');
