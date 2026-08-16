@@ -20,33 +20,6 @@ header h1{font-size:clamp(2.2rem,9vw,4rem);line-height:1.05;margin:0 0 14px}
 header p{font-size:clamp(1rem,4vw,1.2rem);margin:0 auto 18px;max-width:620px}
 #themeBtn{font-size:1rem;padding:9px 14px;border:0;border-radius:999px;cursor:pointer}
 
-nav{
-  position:sticky;
-  top:0;
-  z-index:10;
-  width:100%;
-  background:#ffffffe6;
-  padding:9px max(12px,calc((100% - 1200px)/2));
-  display:flex;
-  gap:8px;
-  overflow-x:auto;
-  -webkit-overflow-scrolling:touch;
-  backdrop-filter:blur(8px);
-  box-shadow:0 2px 10px #0001
-}
-body.dark nav{background:rgba(20,22,23,.92)}
-nav a{
-  flex:0 0 auto;
-  background:#e8eee8;
-  padding:8px 13px;
-  border-radius:999px;
-  text-decoration:none;
-  color:#234;
-  white-space:nowrap;
-  font-size:.9rem
-}
-body.dark nav a{background:#33443a;color:#eef}
-nav a.active{background:#4d7a57;color:#fff}
 
 .wrap{
   width:min(100% - 24px,1200px);
@@ -68,7 +41,7 @@ nav a.active{background:#4d7a57;color:#fff}
 section{width:100%;margin:0 auto 34px}
 .banner{
   min-height:120px;
-  background:linear-gradient(#0005,#0005),url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80') center/cover;
+  background-position:center;background-size:cover;background-repeat:no-repeat;
   border-radius:16px;
   color:#fff;
   font-size:clamp(1.45rem,6vw,2rem);
@@ -80,10 +53,25 @@ section{width:100%;margin:0 auto 34px}
   padding:18px;
   margin:0 0 16px
 }
+.banner-painrelief{background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDE2MDAgNTAwIj48cmVjdCB3aWR0aD0iMTYwMCIgaGVpZ2h0PSI1MDAiIGZpbGw9IiMzMDQ0M2QiLz48Y2lyY2xlIGN4PSIxMzIwIiBjeT0iMTEwIiByPSIxNTAiIGZpbGw9IiM1MzZjNjAiLz48cmVjdCB4PSIxMDUwIiB5PSIyNzUiIHdpZHRoPSIzNjAiIGhlaWdodD0iMzQiIHJ4PSIxNyIgZmlsbD0iI2I3YzZiZCIvPjxyZWN0IHg9IjExMjAiIHk9IjIwNSIgd2lkdGg9IjIyMCIgaGVpZ2h0PSI4NSIgcng9IjQyIiBmaWxsPSIjZDdiNDlhIi8+PHBhdGggZD0iTTEwOTAgMjQ1YzU1LTgwIDE0NS04MCAyMzAgMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZjBkN2MyIiBzdHJva2Utd2lkdGg9IjM0IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48L3N2Zz4=')}
+.banner-lighting{background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDE2MDAgNTAwIj48cmVjdCB3aWR0aD0iMTYwMCIgaGVpZ2h0PSI1MDAiIGZpbGw9IiMxNjI1MzYiLz48Y2lyY2xlIGN4PSIxMjgwIiBjeT0iMTIwIiByPSI5MiIgZmlsbD0iI2Y2ZDc3YSIgb3BhY2l0eT0iLjQiLz48cGF0aCBkPSJNMCAzOTAgUTQwMCAzMDAgODAwIDM5MCBUMTYwMCAzNzBWNTAwSDBaIiBmaWxsPSIjMGQxODIyIi8+PHJlY3QgeD0iNjkwIiB5PSIxNTAiIHdpZHRoPSIxNzAiIGhlaWdodD0iMjMwIiByeD0iNDIiIGZpbGw9IiMyODNiNGMiIHN0cm9rZT0iIzlmYjRjMiIgc3Ryb2tlLXdpZHRoPSIxMCIvPjxyZWN0IHg9IjcyNSIgeT0iMTkwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwNSIgcng9IjE4IiBmaWxsPSIjZjdkOTc4Ii8+PHBhdGggZD0iTTcxNSAxNTVoMTIwTTc2MCAxMjBoMzB2MzVoLTMweiIgc3Ryb2tlPSIjOWZiNGMyIiBzdHJva2Utd2lkdGg9IjEyIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48L3N2Zz4=')}
+.banner-organization{background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDE2MDAgNTAwIj48cmVjdCB3aWR0aD0iMTYwMCIgaGVpZ2h0PSI1MDAiIGZpbGw9IiM0NjUzNWEiLz48cmVjdCB4PSI0MjAiIHk9IjEwNSIgd2lkdGg9Ijc2MCIgaGVpZ2h0PSIzMDAiIHJ4PSIyOCIgZmlsbD0iI2Q5ZGRkOSIvPjxyZWN0IHg9IjQ2NSIgeT0iMTUwIiB3aWR0aD0iMjA1IiBoZWlnaHQ9IjIwNSIgcng9IjE4IiBmaWxsPSIjYTliN2FlIi8+PHJlY3QgeD0iNzAwIiB5PSIxNTAiIHdpZHRoPSIyMDUiIGhlaWdodD0iMjA1IiByeD0iMTgiIGZpbGw9IiNjNmI0OWIiLz48cmVjdCB4PSI5MzUiIHk9IjE1MCIgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMDUiIHJ4PSIxOCIgZmlsbD0iIzdlOWFhNSIvPjxyZWN0IHg9IjUxNSIgeT0iMTg1IiB3aWR0aD0iMTA1IiBoZWlnaHQ9Ijk1IiByeD0iMTIiIGZpbGw9IiM0YjVlNjUiLz48cmVjdCB4PSI3NTAiIHk9IjE4NSIgd2lkdGg9IjEwNSIgaGVpZ2h0PSI5NSIgcng9IjEyIiBmaWxsPSIjNmU1NzQ1Ii8+PGNpcmNsZSBjeD0iMTAzNSIgY3k9IjIzMCIgcj0iNDUiIGZpbGw9IiNkZmU3ZTMiLz48L3N2Zz4=')}
+.banner-beattheheat{background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDE2MDAgNTAwIj48cmVjdCB3aWR0aD0iMTYwMCIgaGVpZ2h0PSI1MDAiIGZpbGw9IiNlNWE5NGMiLz48Y2lyY2xlIGN4PSIxMjcwIiBjeT0iMTI1IiByPSI5MCIgZmlsbD0iI2ZmZTQ5YSIvPjxwYXRoIGQ9Ik0wIDMzMCBRMzAwIDI2MCA2MDAgMzM1IFQxMjAwIDMyMCBUMTYwMCAzNDBWNTAwSDBaIiBmaWxsPSIjNGY5YTljIi8+PHBhdGggZD0iTTAgNDEwIFEzNTAgMzUwIDcwMCA0MjAgVDE0MDAgNDAwIFQxNjAwIDQyMFY1MDBIMFoiIGZpbGw9IiNkN2YxZWMiLz48cGF0aCBkPSJNNjIwIDM2NWM1NS05MCAxNDUtOTAgMjAwIDB2ODVINjIweiIgZmlsbD0iI2Y2ZjBkZiIvPjxwYXRoIGQ9Ik02NzUgMjg1YzM1IDQ1IDYwIDQ1IDk1IDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2U1NWY0ZSIgc3Ryb2tlLXdpZHRoPSIyOCIvPjwvc3ZnPg==')}
+.banner-kitchen{background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDE2MDAgNTAwIj48cmVjdCB3aWR0aD0iMTYwMCIgaGVpZ2h0PSI1MDAiIGZpbGw9IiM2YjRkM2IiLz48cmVjdCB5PSIzNjAiIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjE0MCIgZmlsbD0iIzNiMmQyOCIvPjxjaXJjbGUgY3g9IjgwMCIgY3k9IjMwNSIgcj0iMTUwIiBmaWxsPSIjMjIyIi8+PGNpcmNsZSBjeD0iODAwIiBjeT0iMzA1IiByPSIxMTIiIGZpbGw9IiNiZDZmNDMiLz48cGF0aCBkPSJNNjgwIDI1MGM2NS03MCAxNzUtNzAgMjQwIDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2U3YjE2ZSIgc3Ryb2tlLXdpZHRoPSIxOCIvPjxyZWN0IHg9IjEwNTAiIHk9IjE3MCIgd2lkdGg9IjE3MCIgaGVpZ2h0PSIxNTAiIHJ4PSIyMCIgZmlsbD0iI2M5ZDJkMCIvPjxwYXRoIGQ9Ik0xMjIwIDIwNWg1NWM1NSAwIDU1IDgwIDAgODBoLTU1IiBmaWxsPSJub25lIiBzdHJva2U9IiNjOWQyZDAiIHN0cm9rZS13aWR0aD0iMTgiLz48L3N2Zz4=')}
+.banner-sleep{background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDE2MDAgNTAwIj48cmVjdCB3aWR0aD0iMTYwMCIgaGVpZ2h0PSI1MDAiIGZpbGw9IiMyNDM2NDciLz48Y2lyY2xlIGN4PSIxMjYwIiBjeT0iMTA1IiByPSI3MiIgZmlsbD0iI2U1ZTJjOCIvPjxjaXJjbGUgY3g9IjEyOTUiIGN5PSI4MiIgcj0iNzIiIGZpbGw9IiMyNDM2NDciLz48cGF0aCBkPSJNMCA0MTAgUTQwMCAzMzUgODAwIDQxMCBUMTYwMCAzOTVWNTAwSDBaIiBmaWxsPSIjMTcyNjMzIi8+PHBhdGggZD0iTTUyMCAzOTVMODAwIDE0NWwyODAgMjUwWiIgZmlsbD0iI2MxNWU0MyIvPjxwYXRoIGQ9Ik01ODUgMzkwTDgwMCAyMDVsMjE1IDE4NVoiIGZpbGw9IiNlNWQ5YzYiLz48cGF0aCBkPSJNODAwIDIwNXYxODUiIHN0cm9rZT0iIzliNGEzOCIgc3Ryb2tlLXdpZHRoPSI4Ii8+PC9zdmc+')}
+.banner-toiletries{background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDE2MDAgNTAwIj48cmVjdCB3aWR0aD0iMTYwMCIgaGVpZ2h0PSI1MDAiIGZpbGw9IiNkNWM4YjciLz48cmVjdCB5PSIzNTAiIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2I5YTk5NiIvPjxyZWN0IHg9IjUyMCIgeT0iMTMwIiB3aWR0aD0iMTIwIiBoZWlnaHQ9IjIyMCIgcng9IjI4IiBmaWxsPSIjZThlY2U3Ii8+PHJlY3QgeD0iNTQ1IiB5PSIxMDAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI1MCIgcng9IjEwIiBmaWxsPSIjODc5YThjIi8+PHJlY3QgeD0iNzMwIiB5PSIxNzUiIHdpZHRoPSIxODAiIGhlaWdodD0iMTc1IiByeD0iMjgiIGZpbGw9IiM5YmI1YWQiLz48cmVjdCB4PSI3NzAiIHk9IjE0MCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSI1MCIgcng9IjEyIiBmaWxsPSIjN2Q5MTg4Ii8+PGNpcmNsZSBjeD0iMTA0MCIgY3k9IjI1NSIgcj0iOTUiIGZpbGw9IiNlZWU5ZGYiLz48Y2lyY2xlIGN4PSIxMDQwIiBjeT0iMjU1IiByPSI1OCIgZmlsbD0iI2Q3YzRiMCIvPjwvc3ZnPg==')}
+.banner-healthampbeauty{background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDE2MDAgNTAwIj48cmVjdCB3aWR0aD0iMTYwMCIgaGVpZ2h0PSI1MDAiIGZpbGw9IiNjNmFlYjAiLz48cmVjdCB5PSIzNTUiIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjE0NSIgZmlsbD0iIzlmODU4YSIvPjxjaXJjbGUgY3g9IjgwMCIgY3k9IjI1MCIgcj0iMTMwIiBmaWxsPSIjZWFkZWQ4Ii8+PGNpcmNsZSBjeD0iODAwIiBjeT0iMjUwIiByPSI5MiIgZmlsbD0iI2M5OGQ5MSIvPjxwYXRoIGQ9Ik03MDAgMjM1YzY1LTcwIDEzNS03MCAyMDAgMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZjJjN2M1IiBzdHJva2Utd2lkdGg9IjI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cmVjdCB4PSI0NzAiIHk9IjE4MCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjE3NSIgcng9IjI1IiBmaWxsPSIjZTllZWU4Ii8+PHJlY3QgeD0iNDkwIiB5PSIxNDUiIHdpZHRoPSI1MCIgaGVpZ2h0PSI0NSIgcng9IjgiIGZpbGw9IiM4ZjllOTEiLz48cmVjdCB4PSIxMDQwIiB5PSIxODUiIHdpZHRoPSIxMjUiIGhlaWdodD0iMTcwIiByeD0iMjAiIGZpbGw9IiNlZWU2ZDgiLz48L3N2Zz4=')}
+.banner-footcare{background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDE2MDAgNTAwIj48cmVjdCB3aWR0aD0iMTYwMCIgaGVpZ2h0PSI1MDAiIGZpbGw9IiM0MjU1NGQiLz48cGF0aCBkPSJNMCA0MTAgUTQwMCAzMzAgODAwIDQxMCBUMTYwMCAzOTBWNTAwSDBaIiBmaWxsPSIjMjczYTM0Ii8+PHBhdGggZD0iTTU2MCAzNTBjLTIwLTExMCAzMC0xODAgMTEwLTE4MCA5NSAwIDEyMCA4NSAxMDUgMTUwbC0yNSAxMDBINjUweiIgZmlsbD0iI2QzYjI4ZiIvPjxwYXRoIGQ9Ik02NTAgMTc1YzU1LTM1IDExMC0xMCAxMzAgNDUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2EwN2I1ZCIgc3Ryb2tlLXdpZHRoPSIyMiIvPjxwYXRoIGQ9Ik0xMDUwIDM1MGMtMTUtOTUgMzUtMTU1IDEwNS0xNTUgODAgMCAxMDUgNzAgOTAgMTI1bC0yMCA4MGgtMTc1eiIgZmlsbD0iI2I1YzBiYiIvPjwvc3ZnPg==')}
+.banner-meds{background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDE2MDAgNTAwIj48cmVjdCB3aWR0aD0iMTYwMCIgaGVpZ2h0PSI1MDAiIGZpbGw9IiM1MjY0NmEiLz48cmVjdCB4PSI1NDAiIHk9IjEyMCIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIyODAiIHJ4PSIyOCIgZmlsbD0iI2VkZjFlYiIvPjxyZWN0IHg9IjYyMCIgeT0iMTc1IiB3aWR0aD0iMTYwIiBoZWlnaHQ9Ijk1IiByeD0iMTgiIGZpbGw9IiNkNjZjNWMiLz48cmVjdCB4PSI4MjAiIHk9IjE3NSIgd2lkdGg9IjE2MCIgaGVpZ2h0PSI5NSIgcng9IjE4IiBmaWxsPSIjN2VhNGFkIi8+PHJlY3QgeD0iNjIwIiB5PSIyOTUiIHdpZHRoPSIzNjAiIGhlaWdodD0iNTUiIHJ4PSIxNSIgZmlsbD0iI2Q4ZGZkOSIvPjxjaXJjbGUgY3g9IjgwMCIgY3k9IjEzMCIgcj0iMjgiIGZpbGw9IiM5ZGI2YjAiLz48L3N2Zz4=')}
+.banner-misc{background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDE2MDAgNTAwIj48cmVjdCB3aWR0aD0iMTYwMCIgaGVpZ2h0PSI1MDAiIGZpbGw9IiM1MzYwNGYiLz48cGF0aCBkPSJNMCAzOTAgUTQwMCAzMDAgODAwIDM5MCBUMTYwMCAzNzVWNTAwSDBaIiBmaWxsPSIjMzU0MzM2Ii8+PHJlY3QgeD0iNjIwIiB5PSIxNzAiIHdpZHRoPSIxNzAiIGhlaWdodD0iMTgwIiByeD0iMjQiIGZpbGw9IiNjOWIxN2IiLz48cmVjdCB4PSI4MTAiIHk9IjIwNSIgd2lkdGg9IjE3MCIgaGVpZ2h0PSIxNDUiIHJ4PSIyNCIgZmlsbD0iIzdmOWFhMSIvPjxjaXJjbGUgY3g9IjExMjAiIGN5PSIyNzAiIHI9IjgwIiBmaWxsPSIjZDBkOGM5Ii8+PHBhdGggZD0iTTEwNzUgMjcwaDkwIiBzdHJva2U9IiM3MTgwNmYiIHN0cm9rZS13aWR0aD0iMTUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvc3ZnPg==')}
+.banner-hygene{background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDE2MDAgNTAwIj48cmVjdCB3aWR0aD0iMTYwMCIgaGVpZ2h0PSI1MDAiIGZpbGw9IiNhOWI2YWEiLz48cmVjdCB5PSIzNjAiIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjE0MCIgZmlsbD0iIzg1OTc4YSIvPjxyZWN0IHg9IjUyMCIgeT0iMTUwIiB3aWR0aD0iMTEwIiBoZWlnaHQ9IjIwNSIgcng9IjMwIiBmaWxsPSIjZTllY2U1Ii8+PHJlY3QgeD0iNTQ1IiB5PSIxMTAiIHdpZHRoPSI2MCIgaGVpZ2h0PSI1NSIgcng9IjEyIiBmaWxsPSIjNmU4Mjc0Ii8+PHJlY3QgeD0iNzYwIiB5PSIxNzUiIHdpZHRoPSIyNjAiIGhlaWdodD0iNzAiIHJ4PSIzNSIgZmlsbD0iI2YwZjJlYiIvPjxwYXRoIGQ9Ik04MzAgMjQ1djEwMG0xMjAtMTAwdjEwMCIgc3Ryb2tlPSIjZDVkOWQxIiBzdHJva2Utd2lkdGg9IjE4Ii8+PGNpcmNsZSBjeD0iMTE0MCIgY3k9IjI1NSIgcj0iOTUiIGZpbGw9IiNkOWUzZGIiLz48L3N2Zz4=')}
+.banner-food{background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDE2MDAgNTAwIj48cmVjdCB3aWR0aD0iMTYwMCIgaGVpZ2h0PSI1MDAiIGZpbGw9IiM4YTY1NDciLz48cmVjdCB5PSIzNjAiIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjE0MCIgZmlsbD0iIzYyNDUzMiIvPjxlbGxpcHNlIGN4PSI4MDAiIGN5PSIzMDAiIHJ4PSIzMDAiIHJ5PSIxMzAiIGZpbGw9IiNlY2U2ZDciLz48ZWxsaXBzZSBjeD0iODAwIiBjeT0iMjk1IiByeD0iMjMwIiByeT0iODUiIGZpbGw9IiM4ZWE2NWQiLz48Y2lyY2xlIGN4PSI3MDAiIGN5PSIyNzUiIHI9IjQ1IiBmaWxsPSIjZDc3YTUwIi8+PGNpcmNsZSBjeD0iODIwIiBjeT0iMzIwIiByPSI0MiIgZmlsbD0iI2U2YjM0ZiIvPjxjaXJjbGUgY3g9IjkwMCIgY3k9IjI2NSIgcj0iMzgiIGZpbGw9IiNjODViNDgiLz48L3N2Zz4=')}
+.banner-drinking{background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDE2MDAgNTAwIj48cmVjdCB3aWR0aD0iMTYwMCIgaGVpZ2h0PSI1MDAiIGZpbGw9IiMzOTc4OGEiLz48cGF0aCBkPSJNMCAzOTAgUTQwMCAzMzAgODAwIDM5NSBUMTYwMCAzODBWNTAwSDBaIiBmaWxsPSIjMjc1ZjcwIi8+PHJlY3QgeD0iNjkwIiB5PSIxMjAiIHdpZHRoPSIyMTAiIGhlaWdodD0iMjcwIiByeD0iNTUiIGZpbGw9IiNkN2U0ZGYiLz48cmVjdCB4PSI3MzUiIHk9Ijc1IiB3aWR0aD0iMTIwIiBoZWlnaHQ9IjY1IiByeD0iMTgiIGZpbGw9IiM5ZmI4YjIiLz48cmVjdCB4PSI3MzUiIHk9IjE3NSIgd2lkdGg9IjEyMCIgaGVpZ2h0PSIxNzUiIHJ4PSIzOCIgZmlsbD0iIzZiYTZhNiIvPjxwYXRoIGQ9Ik03NzAgMjA1aDUwbS01MCA0NWg1MG0tNTAgNDVoNTAiIHN0cm9rZT0iI2Q3ZjBlOCIgc3Ryb2tlLXdpZHRoPSIxMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PC9zdmc+')}
+.banner-staywarm{background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDE2MDAgNTAwIj48cmVjdCB3aWR0aD0iMTYwMCIgaGVpZ2h0PSI1MDAiIGZpbGw9IiMzZTMwMzAiLz48cGF0aCBkPSJNMCA0MTAgUTQwMCAzMzAgODAwIDQxMCBUMTYwMCAzOTBWNTAwSDBaIiBmaWxsPSIjMjkyNTI2Ii8+PHBhdGggZD0iTTgwMCAzOTVjLTkwLTkwLTU1LTE4MCAwLTI1MCA1NSA3MCA5MCAxNjAgMCAyNTB6IiBmaWxsPSIjZTM1ZjNkIi8+PHBhdGggZD0iTTgwMCAzNzBjLTQ1LTYwLTI1LTExNSAwLTE2MCAyOCA0NSA0NSAxMDUgMCAxNjB6IiBmaWxsPSIjZmZkMzZiIi8+PHJlY3QgeD0iNDMwIiB5PSIyMjAiIHdpZHRoPSIxODAiIGhlaWdodD0iMTIwIiByeD0iMzAiIGZpbGw9IiM4ZDZmNjIiLz48cmVjdCB4PSI5OTAiIHk9IjIyMCIgd2lkdGg9IjE4MCIgaGVpZ2h0PSIxMjAiIHJ4PSIzMCIgZmlsbD0iIzliN2M2ZCIvPjwvc3ZnPg==')}
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));
-  gap:16px;
+  grid-template-columns:minmax(0,1fr);
+  gap:12px;
   justify-items:stretch
 }
 .card{
@@ -91,7 +79,7 @@ section{width:100%;margin:0 auto 34px}
   max-width:420px;
   margin:0 auto;
   background:var(--c);
-  padding:17px;
+  padding:14px 15px;
   border-radius:16px;
   box-shadow:0 6px 16px #0002;
   opacity:0;
@@ -99,8 +87,7 @@ section{width:100%;margin:0 auto 34px}
   transition:.3s
 }
 .show{opacity:1;transform:none}
-.badge{display:inline-block;background:var(--g);color:#fff;padding:4px 10px;border-radius:999px;font-size:.75rem}
-.card h3{font-size:1rem;line-height:1.35;margin:12px 0 8px;overflow-wrap:anywhere}
+.card h3{font-size:1rem;line-height:1.3;margin:0;overflow-wrap:anywhere}
 .card p{color:var(--muted);margin:0}
 .btn{
   display:block;
@@ -111,16 +98,79 @@ section{width:100%;margin:0 auto 34px}
   padding:11px 14px;
   text-decoration:none;
   border-radius:9px;
-  margin-top:14px;
+  margin-top:12px;
   font-weight:600
 }
 footer{padding:30px 12px;text-align:center;color:var(--muted)}
+
+
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:20;
+  width:100%;
+  background:#fffffff2;
+  backdrop-filter:blur(10px);
+  box-shadow:0 2px 10px #0002
+}
+body.dark .topbar{background:rgba(20,22,23,.94)}
+.nav-inner{
+  width:min(100% - 18px,1200px);
+  min-height:52px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between
+}
+.nav-title{font-weight:700;font-size:1rem;color:var(--text)}
+.menu-btn{
+  width:42px;
+  height:42px;
+  border:0;
+  border-radius:10px;
+  background:#e8eee8;
+  color:#234;
+  font-size:1.5rem;
+  line-height:1;
+  cursor:pointer
+}
+body.dark .menu-btn{background:#33443a;color:#eef}
+.category-menu{
+  display:none;
+  width:min(100% - 18px,1200px);
+  max-height:70vh;
+  overflow-y:auto;
+  margin:0 auto 10px;
+  padding:4px 0 10px;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:8px
+}
+.category-menu.open{display:grid}
+.category-menu a{
+  display:block;
+  background:#e8eee8;
+  padding:11px 12px;
+  border-radius:10px;
+  text-decoration:none;
+  color:#234;
+  font-size:.92rem
+}
+body.dark .category-menu a{background:#33443a;color:#eef}
+.category-menu a.active{background:#4d7a57;color:#fff}
+
+
+@media (max-width:480px){
+  .card{padding:13px 14px}
+  .card h3{font-size:.96rem}
+  .btn{padding:10px 12px;margin-top:10px}
+}
 
 @media (min-width:700px){
   header{min-height:48vh}
   .wrap{padding-top:24px}
   .banner{min-height:150px}
-  .card{max-width:none}
+  .grid{grid-template-columns:minmax(0,1fr)}
+  .card{max-width:100%}
 }
 @media (max-width:480px){
   .wrap{width:min(100% - 18px,1200px)}
@@ -131,7 +181,29 @@ footer{padding:30px 12px;text-align:center;color:var(--muted)}
   .banner{min-height:105px;margin-bottom:12px}
 }
 </style></head><body class='dark'>
-<header><div><h1>Los' Camping Gear</h1><p>Personally recommended gear for camping, travel, and outdoor adventures.</p><button id="themeBtn">☀️ / 🌙</button></div></header><nav><a href='#painrelief'>💆 Pain Relief</a><a href='#lighting'>🏕️ Lighting</a><a href='#organization'>🎒 Organization</a><a href='#beattheheat'>🧊 Beat the Heat</a><a href='#kitchen'>🍳 Kitchen</a><a href='#sleep'>🏕️ Sleep</a><a href='#toiletries'>🏕️ Toiletries</a><a href='#healthampbeauty'>🏕️ Health &amp; Beauty</a><a href='#footcare'>🏕️ Foot Care</a><a href='#meds'>🏕️ Meds</a><a href='#misc'>🏕️ Misc</a><a href='#hygene'>🏕️ Hygene</a><a href='#food'>🏕️ Food</a><a href='#drinking'>🏕️ Drinking</a><a href='#staywarm'>🏕️ Stay Warm</a></nav><div class='wrap'><input id='q' placeholder='Search gear...'/><section id='painrelief'><div class='banner'>💆 Pain Relief</div><div class='grid'><div class='card'><span class='badge'>Pain Relief</span><h3>Ancient Minerals Magnesium Bath Flakes – Pure Zechstein Magnesiu</h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/4fHSky9' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div></div></section><section id='lighting'><div class='banner'>🏕️ Lighting</div><div class='grid'><div class='card'><span class='badge'>Lighting</span><h3>USB Mini LED Lantern, 2 Pack Waterproof EDC Keychain LED Flashli</h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/4binXx5' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><span class='badge'>Lighting</span><h3>ThruNite Ti Keychain Flashlight, USB-C Rechargeable EDC Pocket L</h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/3Rkiori' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div></div></section><section id='organization'><div class='banner'>🎒 Organization</div><div class='grid'><div class='card'><span class='badge'>Organization</span><h3>Hanging Suitcase Organizer</h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/4fwIRv0' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><span class='badge'>Organization</span><h3>CHENSPRX Minimalist RFID Blocking Small Wallet</h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/3TyDrHa' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><span class='badge'>Organization</span><h3>Relavel Travel Toiletry Bag for Men, Large Hanging Toiletries Ba</h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/4xbhOuY' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><span class='badge'>Organization</span><h3>HODRANT Large Tactical Camping Kitchen Organizer for BBQ Cooking</h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/3RqYQl4' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div></div></section><section id='beattheheat'><div class='banner'>🧊 Beat the Heat</div><div class='grid'><div class='card'><span class='badge'>Beat the Heat</span><h3>BASSDASH Men’s UPF 50+ Fishing Hiking Camo Hoodie Shirt</h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/4g5esnu' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><span class='badge'>Beat the Heat</span><h3>BLUE LIZARD Sport Mineral Sunscreen Spray SPF 50+, Dermatologist</h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/4xdGO4U' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><span class='badge'>Beat the Heat</span><h3>Preboun 8 Pcs Neck Cooling Tubes Reusable Ice Neck Cooler Rings </h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/4pM8viG' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><span class='badge'>Beat the Heat</span><h3>Warmco D4 Pro Portable Camping Fan 20000mAh, 18W Charge &amp; 22.5W </h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/3RAsLqZ' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div></div></section><section id='kitchen'><div class='banner'>🍳 Kitchen</div><div class='grid'><div class='card'><span class='badge'>Kitchen</span><h3>DUMOS Ice Maker Countertop, Ice Machine</h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/4bn91hj' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><span class='badge'>Kitchen</span><h3>Pop-Up Trash Bin, Collapsible Trash Can, Black |</h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/4wzyIUk' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><span class='badge'>Kitchen</span><h3>20PCS Wheat Straw Dinnerware Sets, DQELFA Reusable Kids Toddler </h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/4wzxR6b' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><span class='badge'>Kitchen</span><h3>5 Gallon Water Jug</h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/3TKM69u' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><span class='badge'>Kitchen</span><h3>Clorox Free &amp; Clear Cleaning Wipes, Light Lemon Scent, 75 Count,</h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/3S5mnYT' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div></div></section><section id='sleep'><div class='banner'>🏕️ Sleep</div><div class='grid'><div class='card'><span class='badge'>Sleep</span><h3>Lost Horizon Option3 Self-Inflating Foam Camping Mattress, Twin,</h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/3S7jyXg' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><span class='badge'>Sleep</span><h3>Amazon Basic Care Nighttime Sleep Aid Tablets for Adults, Doxyla</h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/3Txb7F5' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><span class='badge'>Sleep</span><h3>LC-dolida Sleep Headphones, Sleep Mask</h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/3S0Tkpo' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div></div></section><section id='toiletries'><div class='banner'>🏕️ Toiletries</div><div class='grid'><div class='card'><span class='badge'>Toiletries</span><h3>Disposable Compressed Towels, Compressed Towel Tablets, 100 Coun</h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/4bl7b0e' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><span class='badge'>Toiletries</span><h3>Toilet Seat Cover Paper Flushable</h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/4vXEGwW' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><span class='badge'>Toiletries</span><h3>1000cc Pee Bags for Travel for Women Men Kids, 12/24 Pcs Disposa</h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/4x4rsQa' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><span class='badge'>Toiletries</span><h3>Garden Pump Sprayer,68oz/34oz Hand-held Pressure Sprayer Bottle </h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/4fErhDX' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div></div></section><section id='healthampbeauty'><div class='banner'>🏕️ Health &amp; Beauty</div><div class='grid'><div class='card'><span class='badge'>Health &amp; Beauty</span><h3>Teenitor 400 Counts Oil Blotting Papers for Face, Bamboo Charcoa</h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/4biormT' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><span class='badge'>Health &amp; Beauty</span><h3>O2 Nose Filters</h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/44XFuHq' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><span class='badge'>Health &amp; Beauty</span><h3>Body Glide Original Anti Chafe Balm | No Chafing Stick | Prevent</h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/4fF8AS5' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><span class='badge'>Health &amp; Beauty</span><h3>Dr. Dan&#x27;s Cortibalm 1-Pack Lip Balm</h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/44YxAgU' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div></div></section><section id='footcare'><div class='banner'>🏕️ Foot Care</div><div class='grid'><div class='card'><span class='badge'>Foot Care</span><h3>Dr. Scholl&#x27;s® Tired, Achy Feet Soothing &amp; Reviving Foot Mask, 3 </h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/3REmsCO' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><span class='badge'>Foot Care</span><h3>Insole Foot Warmers</h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/4wy3Inu' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><span class='badge'>Foot Care</span><h3>4D Cloud Insoles for Men and Women Insoles Men Super Soft Anti-F</h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/3TNHHTb' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div></div></section><section id='meds'><div class='banner'>🏕️ Meds</div><div class='grid'><div class='card'><span class='badge'>Meds</span><h3>HealthA2Z® Gas Relief Simethicone 180mg | Relieves from Stomach </h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/44Y50MA' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><span class='badge'>Meds</span><h3>Vitamatic Peppermint Oil Gel</h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/4vVzwBB' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><span class='badge'>Meds</span><h3>Dual Action Acetaminophen 250mg and Ibuprofen 125mg Caplets, Up </h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/4wwX0hA' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div></div></section><section id='misc'><div class='banner'>🏕️ Misc</div><div class='grid'><div class='card'><span class='badge'>Misc</span><h3>25 PCS</h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/3TyDUsU' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div></div></section><section id='hygene'><div class='banner'>🏕️ Hygene</div><div class='grid'><div class='card'><span class='badge'>Hygene</span><h3>Lansinoh Lanolin Lip Balm, 2 Pack, 0.25 oz Each, Ultra-Moisturiz</h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/3Rr4fbP' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div></div></section><section id='food'><div class='banner'>🏕️ Food</div><div class='grid'><div class='card'><span class='badge'>Food</span><h3>Coffee Snax Cold Brew Coffee Concentrate, Caramel Coffee Concent</h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/4vSpQI5' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div></div></section><section id='drinking'><div class='banner'>🏕️ Drinking</div><div class='grid'><div class='card'><span class='badge'>Drinking</span><h3>12oz Insulated Travel Coffee Mug</h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/3TtK5OY' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><span class='badge'>Drinking</span><h3>JOOPETALK Universal Can Cooler</h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/4bphtwl' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><span class='badge'>Drinking</span><h3>BJPKPK 64oz Stainless Steel Water Bottle, Half Gallon Insulated </h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/4fuTRJh' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div></div></section><section id='staywarm'><div class='banner'>🏕️ Stay Warm</div><div class='grid'><div class='card'><span class='badge'>Stay Warm</span><h3>AI Hand Warmers Rechargeable 2 Pack, AI Smart Chips Electric Han</h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/4h12U5Q' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><span class='badge'>Stay Warm</span><h3>BRAMBLE 1 Pack Hand Warmers Reusable</h3><p>Reliable gear selected for this category.</p><a class='btn' href='https://amzn.to/4xgRzDG' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div></div></section><footer style='padding:40px;text-align:center'>As an Amazon Associate I earn from qualifying purchases.</footer></div>
+<header><div><h1>Los' Camping Gear</h1><p>Personally recommended gear for camping, travel, and outdoor adventures.</p><button id="themeBtn">☀️ / 🌙</button></div></header><nav class='topbar'>
+  <div class='nav-inner'>
+    <span class='nav-title'>Categories</span>
+    <button id='menuBtn' class='menu-btn' type='button' aria-label='Open categories' aria-expanded='false'>☰</button>
+  </div>
+  <div id='categoryMenu' class='category-menu' aria-hidden='true'>
+      <a href='#painrelief'>Pain Relief</a>
+      <a href='#lighting'>Lighting</a>
+      <a href='#organization'>Organization</a>
+      <a href='#beattheheat'>Beat the Heat</a>
+      <a href='#kitchen'>Kitchen</a>
+      <a href='#sleep'>Sleep</a>
+      <a href='#toiletries'>Toiletries</a>
+      <a href='#healthampbeauty'>Health &amp; Beauty</a>
+      <a href='#footcare'>Foot Care</a>
+      <a href='#meds'>Meds</a>
+      <a href='#misc'>Misc</a>
+      <a href='#hygene'>Hygene</a>
+      <a href='#food'>Food</a>
+      <a href='#drinking'>Drinking</a>
+      <a href='#staywarm'>Stay Warm</a>
+  </div>
+</nav><div class='wrap'><input id='q' placeholder='Search gear...'/><section id='painrelief'><div class='banner banner-painrelief'>Pain Relief</div><div class='grid'><div class='card'><h3>Ancient Minerals Magnesium Bath Flakes – Pure Zechstein Magnesiu</h3><a class='btn' href='https://amzn.to/4fHSky9' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div></div></section><section id='lighting'><div class='banner banner-lighting'>Lighting</div><div class='grid'><div class='card'><h3>USB Mini LED Lantern, 2 Pack Waterproof EDC Keychain LED Flashli</h3><a class='btn' href='https://amzn.to/4binXx5' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><h3>ThruNite Ti Keychain Flashlight, USB-C Rechargeable EDC Pocket L</h3><a class='btn' href='https://amzn.to/3Rkiori' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div></div></section><section id='organization'><div class='banner banner-organization'>Organization</div><div class='grid'><div class='card'><h3>Hanging Suitcase Organizer</h3><a class='btn' href='https://amzn.to/4fwIRv0' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><h3>CHENSPRX Minimalist RFID Blocking Small Wallet</h3><a class='btn' href='https://amzn.to/3TyDrHa' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><h3>Relavel Travel Toiletry Bag for Men, Large Hanging Toiletries Ba</h3><a class='btn' href='https://amzn.to/4xbhOuY' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><h3>HODRANT Large Tactical Camping Kitchen Organizer for BBQ Cooking</h3><a class='btn' href='https://amzn.to/3RqYQl4' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div></div></section><section id='beattheheat'><div class='banner banner-beattheheat'>Beat the Heat</div><div class='grid'><div class='card'><h3>BASSDASH Men’s UPF 50+ Fishing Hiking Camo Hoodie Shirt</h3><a class='btn' href='https://amzn.to/4g5esnu' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><h3>BLUE LIZARD Sport Mineral Sunscreen Spray SPF 50+, Dermatologist</h3><a class='btn' href='https://amzn.to/4xdGO4U' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><h3>Preboun 8 Pcs Neck Cooling Tubes Reusable Ice Neck Cooler Rings </h3><a class='btn' href='https://amzn.to/4pM8viG' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><h3>Warmco D4 Pro Portable Camping Fan 20000mAh, 18W Charge &amp; 22.5W </h3><a class='btn' href='https://amzn.to/3RAsLqZ' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div></div></section><section id='kitchen'><div class='banner banner-kitchen'>Kitchen</div><div class='grid'><div class='card'><h3>DUMOS Ice Maker Countertop, Ice Machine</h3><a class='btn' href='https://amzn.to/4bn91hj' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><h3>Pop-Up Trash Bin, Collapsible Trash Can, Black |</h3><a class='btn' href='https://amzn.to/4wzyIUk' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><h3>20PCS Wheat Straw Dinnerware Sets, DQELFA Reusable Kids Toddler </h3><a class='btn' href='https://amzn.to/4wzxR6b' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><h3>5 Gallon Water Jug</h3><a class='btn' href='https://amzn.to/3TKM69u' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><h3>Clorox Free &amp; Clear Cleaning Wipes, Light Lemon Scent, 75 Count,</h3><a class='btn' href='https://amzn.to/3S5mnYT' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div></div></section><section id='sleep'><div class='banner banner-sleep'>Sleep</div><div class='grid'><div class='card'><h3>Lost Horizon Option3 Self-Inflating Foam Camping Mattress, Twin,</h3><a class='btn' href='https://amzn.to/3S7jyXg' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><h3>Amazon Basic Care Nighttime Sleep Aid Tablets for Adults, Doxyla</h3><a class='btn' href='https://amzn.to/3Txb7F5' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><h3>LC-dolida Sleep Headphones, Sleep Mask</h3><a class='btn' href='https://amzn.to/3S0Tkpo' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div></div></section><section id='toiletries'><div class='banner banner-toiletries'>Toiletries</div><div class='grid'><div class='card'><h3>Disposable Compressed Towels, Compressed Towel Tablets, 100 Coun</h3><a class='btn' href='https://amzn.to/4bl7b0e' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><h3>Toilet Seat Cover Paper Flushable</h3><a class='btn' href='https://amzn.to/4vXEGwW' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><h3>1000cc Pee Bags for Travel for Women Men Kids, 12/24 Pcs Disposa</h3><a class='btn' href='https://amzn.to/4x4rsQa' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><h3>Garden Pump Sprayer,68oz/34oz Hand-held Pressure Sprayer Bottle </h3><a class='btn' href='https://amzn.to/4fErhDX' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div></div></section><section id='healthampbeauty'><div class='banner banner-healthampbeauty'>Health &amp; Beauty</div><div class='grid'><div class='card'><h3>Teenitor 400 Counts Oil Blotting Papers for Face, Bamboo Charcoa</h3><a class='btn' href='https://amzn.to/4biormT' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><h3>O2 Nose Filters</h3><a class='btn' href='https://amzn.to/44XFuHq' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><h3>Body Glide Original Anti Chafe Balm | No Chafing Stick | Prevent</h3><a class='btn' href='https://amzn.to/4fF8AS5' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><h3>Dr. Dan&#x27;s Cortibalm 1-Pack Lip Balm</h3><a class='btn' href='https://amzn.to/44YxAgU' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div></div></section><section id='footcare'><div class='banner banner-footcare'>Foot Care</div><div class='grid'><div class='card'><h3>Dr. Scholl&#x27;s® Tired, Achy Feet Soothing &amp; Reviving Foot Mask, 3 </h3><a class='btn' href='https://amzn.to/3REmsCO' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><h3>Insole Foot Warmers</h3><a class='btn' href='https://amzn.to/4wy3Inu' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><h3>4D Cloud Insoles for Men and Women Insoles Men Super Soft Anti-F</h3><a class='btn' href='https://amzn.to/3TNHHTb' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div></div></section><section id='meds'><div class='banner banner-meds'>Meds</div><div class='grid'><div class='card'><h3>HealthA2Z® Gas Relief Simethicone 180mg | Relieves from Stomach </h3><a class='btn' href='https://amzn.to/44Y50MA' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><h3>Vitamatic Peppermint Oil Gel</h3><a class='btn' href='https://amzn.to/4vVzwBB' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><h3>Dual Action Acetaminophen 250mg and Ibuprofen 125mg Caplets, Up </h3><a class='btn' href='https://amzn.to/4wwX0hA' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div></div></section><section id='misc'><div class='banner banner-misc'>Misc</div><div class='grid'><div class='card'><h3>25 PCS</h3><a class='btn' href='https://amzn.to/3TyDUsU' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div></div></section><section id='hygene'><div class='banner banner-hygene'>Hygene</div><div class='grid'><div class='card'><h3>Lansinoh Lanolin Lip Balm, 2 Pack, 0.25 oz Each, Ultra-Moisturiz</h3><a class='btn' href='https://amzn.to/3Rr4fbP' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div></div></section><section id='food'><div class='banner banner-food'>Food</div><div class='grid'><div class='card'><h3>Coffee Snax Cold Brew Coffee Concentrate, Caramel Coffee Concent</h3><a class='btn' href='https://amzn.to/4vSpQI5' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div></div></section><section id='drinking'><div class='banner banner-drinking'>Drinking</div><div class='grid'><div class='card'><h3>12oz Insulated Travel Coffee Mug</h3><a class='btn' href='https://amzn.to/3TtK5OY' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><h3>JOOPETALK Universal Can Cooler</h3><a class='btn' href='https://amzn.to/4bphtwl' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><h3>BJPKPK 64oz Stainless Steel Water Bottle, Half Gallon Insulated </h3><a class='btn' href='https://amzn.to/4fuTRJh' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div></div></section><section id='staywarm'><div class='banner banner-staywarm'>Stay Warm</div><div class='grid'><div class='card'><h3>AI Hand Warmers Rechargeable 2 Pack, AI Smart Chips Electric Han</h3><a class='btn' href='https://amzn.to/4h12U5Q' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div><div class='card'><h3>BRAMBLE 1 Pack Hand Warmers Reusable</h3><a class='btn' href='https://amzn.to/4xgRzDG' target='_blank' rel='nofollow sponsored'>View on Amazon</a></div></div></section><footer style='padding:40px;text-align:center'>As an Amazon Associate I earn from qualifying purchases.</footer></div>
 <script>
 q.oninput=()=>{let v=q.value.toLowerCase();document.querySelectorAll('.card').forEach(c=>c.style.display=c.innerText.toLowerCase().includes(v)?'':'none')}
 let io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}));document.querySelectorAll('.card').forEach(c=>io.observe(c));
@@ -141,7 +213,24 @@ const saved=localStorage.getItem('theme');
 if(saved==='light')document.body.classList.remove('dark');
 btn.onclick=()=>{document.body.classList.toggle('dark');localStorage.setItem('theme',document.body.classList.contains('dark')?'dark':'light');};
 const secs=[...document.querySelectorAll('section')];
-const links=[...document.querySelectorAll('nav a')];
+const links=[...document.querySelectorAll('.category-menu a')];
+const menuBtn=document.getElementById('menuBtn');
+const categoryMenu=document.getElementById('categoryMenu');
+
+menuBtn.onclick=()=>{
+  const open=categoryMenu.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded',open?'true':'false');
+  categoryMenu.setAttribute('aria-hidden',open?'false':'true');
+  menuBtn.textContent=open?'✕':'☰';
+};
+
+links.forEach(a=>a.addEventListener('click',()=>{
+  categoryMenu.classList.remove('open');
+  menuBtn.setAttribute('aria-expanded','false');
+  categoryMenu.setAttribute('aria-hidden','true');
+  menuBtn.textContent='☰';
+}));
+
 window.addEventListener('scroll',()=>{
  let cur='';
  secs.forEach(s=>{if(scrollY>=s.offsetTop-120)cur=s.id;});
